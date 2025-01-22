@@ -4,21 +4,22 @@
     box-sizing: border-box;
 }
 
-body{
-font-family: Quicksand;
-font-style: normal;
+body {
+    font-family: Quicksand;
+    font-style: normal;
 
 
 }
 
-header , main{
+header,
+main {
     padding: 0% 10%;
 }
 
 
 /* cmn style */
 
-.btn-primary{
+.btn-primary {
     padding: 15px 35px;
     border-radius: 12px;
     font-size: 1.2rem;
@@ -29,7 +30,7 @@ header , main{
 }
 
 
-.hide{
+.hide {
     display: none;
 }
 
@@ -37,7 +38,7 @@ header , main{
 
 /* header  */
 
-header{
+header {
     background: var(--White, #F7F7F7);
 }
 
@@ -45,23 +46,23 @@ header{
 /* nav section */
 
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 1.5rem;
-    padding-bottom: 3.8rem ;
+    padding-bottom: 3.8rem;
 
 }
 
-.logo >h3{
+.logo>h3 {
 
     color: var(--Black, #111);
-font-size: 2rem;
-font-weight: 700;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.logo{
+.logo {
 
     display: flex;
     align-items: center;
@@ -70,81 +71,171 @@ font-weight: 700;
 
 .nav-options a {
     text-decoration: none;
-    font-size: 1.2rem ;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
-.nav-options li{
+.nav-options li {
 
     list-style: none;
 
 
 }
 
-ul li:nth-child(1) a{
-    color:var(--Orange, #FEA301) ;
+ul li:nth-child(1) a {
+    color: var(--Orange, #FEA301);
 }
-ul li:nth-child(2) a{
+
+ul li:nth-child(2) a {
     color: var(--Sky-Blue, #01ACFD);
 }
-ul li:nth-child(3) a{
+
+ul li:nth-child(3) a {
     color: #05D4DF;
 }
-ul li:nth-child(4) a{
+
+ul li:nth-child(4) a {
     color: #5D58EF;
 }
 
-.nav-options ul{
+.nav-options ul {
     display: flex;
-    gap: 2.4rem ;
+    gap: 2.4rem;
 }
 
-.nav-btn{
+.nav-btn {
     padding: 15px 35px;
     border-radius: 12px;
     font-size: 1.2rem;
     font-weight: 600;
     border: none;
     color: #FFF;
-background: var(--Orange, #FEA301);
+    background: var(--Orange, #FEA301);
 }
 
 
 /* Banner-section */
 
 
-.banner-section{
+.banner-section {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    
+
 }
 
 
 
-.banner-heading{
+.banner-heading {
 
-font-size: 3.5rem;
-font-weight: 700;
-margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
-.banner-description{
+.banner-description {
     color: var(--Black, #111);
-font-size: 1.3rem;
-font-weight: 400;
-margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
 }
 
 
-.b-img{
+.b-img {
     width: 100%;
 }
 
 
-/* body */
+
+/* Main  */
+
+main {
+
+    background: url(/assets/bg.png)
+}
+
+/* Standard Curriculum section */
+
+.curriculum {
+    padding: 3.2rem 0;
+    text-align: center;
+}
+
+.section-title {
+    color: #000;
+    font-size: 46px;
+    font-weight: 700;
+    padding-bottom: 5rem;
+}
+
+.c-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    padding-bottom: 5rem ;
+}
+
+.c-card {
+    padding: 3.25rem 2.3rem;
+    border-radius: 1.2rem;
+    border: 0.943px solid #DEF5FF;
+    box-shadow: 0px 0px 28.296px 0.943px rgba(0, 0, 0, 0.05) inset;
+}
+
+.c1 {
+    background: linear-gradient(180deg, #DEF5FF 0%, rgba(255, 255, 255, 0.00) 40%), #FFF;
+}
+
+.c2 {
+
+    background: linear-gradient(180deg, #FFF4DC 0%, rgba(255, 255, 255, 0.00) 40%), #FFF;
+
+}
+
+.c3 {
+    background: linear-gradient(180deg, #EEE1FF 0%, rgba(255, 255, 255, 0.00) 40%), #FFF;
+
+
+}
+
+.c-card-title {
+    padding: 2rem 0;
+    color: #202020;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.c-card-description{
+
+    color: #808080;
+font-size: 1rem;
+font-weight: 500;
+padding-bottom: 2rem;
+}
+
+.c-card a{
+    text-decoration: none;
+font-size: 1rem;
+font-weight: 700;
+}
+
+
+.lr-b{
+    border-radius: 50%;
+background: var(--Orange, #FEA301);
+border: none;
+    padding: 1rem 1.2rem;
+    
+}
+
+.fa-solid{
+    color: #FFF;
+  font-size: 1.8rem;
+}
 
 
 
@@ -153,17 +244,22 @@ margin-bottom: 1.5rem;
 
 /* Media query for mobile devices */
 
-@media screen and ( max-width: 768px) {
+@media screen and (max-width: 768px) {
 
 
+/* banner section */
 
-
-    .banner-section{
+    .banner-section {
         flex-direction: column-reverse;
         text-align: center;
     }
 
 
 
-    
+    /* Standard Curriculum section */
+
+.c-card-container {
+    grid-template-columns: repeat(1,1fr);
+}
+
 }
