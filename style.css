@@ -153,7 +153,8 @@ ul li:nth-child(4) a {
 
 main {
 
-    background: url(/assets/bg.png)
+
+    background-image: linear-gradient(0deg, rgba(254, 163, 1, 0.30) 20%, rgba(255, 255, 255, 0.30) 40%), url(./assets/bg.png);
 }
 
 /* Standard Curriculum section */
@@ -168,6 +169,7 @@ main {
     font-size: 46px;
     font-weight: 700;
     padding-bottom: 5rem;
+    text-align: center;
 }
 
 .c-card-container {
@@ -175,7 +177,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
 
-    padding-bottom: 5rem ;
+    padding-bottom: 5rem;
 }
 
 .c-card {
@@ -209,33 +211,114 @@ main {
 
 }
 
-.c-card-description{
+.c-card-description {
 
     color: #808080;
-font-size: 1rem;
-font-weight: 500;
-padding-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
 }
 
-.c-card a{
+.c-card a {
     text-decoration: none;
-font-size: 1rem;
-font-weight: 700;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 
-.lr-b{
+.lr-b {
     border-radius: 50%;
-background: var(--Orange, #FEA301);
-border: none;
+    background: var(--Orange, #FEA301);
+    border: none;
     padding: 1rem 1.2rem;
-    
+
 }
 
-.fa-solid{
+.fa-solid {
     color: #FFF;
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
+
+
+/* stories section */
+
+.stories-section{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3.5rem;
+}
+
+.s-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.3rem;
+    padding-bottom: 5rem;
+
+
+}
+
+.s1 {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.s-card {
+    border-radius: 1rem;
+    background: #FFF;
+    /* box-shadow: 5px 5px 20px grey; */
+    position: relative;
+
+
+}
+
+.s-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0rem 0rem;
+
+
+}
+.s-card-btn {
+
+    position: absolute;
+    top: 54%;
+    left: 5%;
+    z-index: 1;
+
+    border-radius: 1.7rem;
+    border: none;
+    background: #95B226;
+    padding: 1em 1.5em;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+    font-size: .9rem;
+    font-weight: 500;
+
+}
+
+.s-card-content {
+    padding: 1.5rem;
+}
+
+.s-card-title {
+    color: #000;
+    font-size: 1em;
+    font-weight: 700;
+    padding-top: 1.2rem;
+
+}
+
+.s1 .s-card-btn{
+    background: #3CD8E8;
+        
+}
+
 
 
 
@@ -244,10 +327,13 @@ border: none;
 
 /* Media query for mobile devices */
 
+
+
+
 @media screen and (max-width: 768px) {
 
 
-/* banner section */
+    /* banner section */
 
     .banner-section {
         flex-direction: column-reverse;
@@ -258,8 +344,50 @@ border: none;
 
     /* Standard Curriculum section */
 
-.c-card-container {
-    grid-template-columns: repeat(1,1fr);
-}
+    .c-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    /* stories section */
+
+    .s1 {
+        display: none;
+    }
+
+    .s-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .s-card-btn {
+
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        z-index: 1;
+    
+        border-radius: 1.7rem;
+        border: none;
+        background: #95B226;
+        padding: 1em 1.5em;
+        justify-content: center;
+        align-items: center;
+    
+        color: #FFF;
+        font-size: .6rem;
+        font-weight: 500;
+    
+    }
+
+    .s-card-title {
+        color: #000;
+        font-size: 1em;
+        font-weight: 700;
+        
+    
+    }
+
+    
 
 }
