@@ -399,6 +399,8 @@ footer li {
 
 
 .scrolling-text {
+
+    overflow: hidden;
     width: 100%;
     white-space: nowrap;
     animation: scroll 15s linear infinite;
@@ -407,11 +409,18 @@ footer li {
     color:#01ACFD;
     font-size: 1.5rem;
     font-weight: 700;
+    position: relative;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    position: absolute;
+    animation: scroll 10s linear infinite;
 }
 
 @keyframes scroll {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
         transform: translateX(-100%);
