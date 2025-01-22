@@ -82,19 +82,19 @@ nav {
 
 }
 
-ul li:nth-child(1) a {
+nav ul li:nth-child(1) a {
     color: var(--Orange, #FEA301);
 }
 
-ul li:nth-child(2) a {
+nav ul li:nth-child(2) a {
     color: var(--Sky-Blue, #01ACFD);
 }
 
-ul li:nth-child(3) a {
+nav ul li:nth-child(3) a {
     color: #05D4DF;
 }
 
-ul li:nth-child(4) a {
+nav ul li:nth-child(4) a {
     color: #5D58EF;
 }
 
@@ -111,6 +111,17 @@ ul li:nth-child(4) a {
     border: none;
     color: #FFF;
     background: var(--Orange, #FEA301);
+}
+
+
+.nav-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-icon i {
+    font-size: 1.5rem;
+    color:#FEA301;
 }
 
 
@@ -319,7 +330,63 @@ main {
         
 }
 
+.s-card-btn:hover {
+    background: #5D58F0;
+}
 
+
+
+/* footer */
+
+
+footer{
+    padding: 5rem 10%;
+    background: #01ACFD;
+    color: #FFF;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5rem;
+
+    justify-content: center;
+    align-items:first baseline;
+
+
+}
+
+.footer-logo{
+font-size: 2.5rem;
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 1rem;
+padding-bottom: 1.5rem;
+}
+
+.con-msg-description{
+    color: #FFF;
+font-size: 1.2rem;
+font-weight: 400;
+}
+
+.about-school-title{
+    color: #FFF;
+font-size: 2rem;
+font-weight: 700;
+padding-bottom: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #FFF;
+}
+
+footer li {
+    list-style: none;
+    padding-bottom: 1.2rem;
+}
 
 
 
@@ -331,6 +398,48 @@ main {
 
 
 @media screen and (max-width: 768px) {
+
+
+    /* nav section */
+
+
+    @media screen and (max-width: 768px) {
+        .nav-options {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            position: absolute;
+            top: 5rem;
+            right: 1rem;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .nav-options.active {
+            display: flex;
+        }
+    
+        .nav-btn {
+            display: none;
+        }
+    
+        .nav-btn.show {
+            display: block;
+            margin-top: 1rem;
+            align-self: center;
+        }
+    
+        .nav-icon {
+            display: block;
+        }
+    
+        nav {
+            position: relative;
+        }
+    }
+    
 
 
     /* banner section */
@@ -386,6 +495,11 @@ main {
         font-weight: 700;
         
     
+    }
+
+    footer{
+
+        grid-template-columns: repeat(1,1fr);
     }
 
     
