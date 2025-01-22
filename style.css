@@ -29,6 +29,9 @@ main {
     background: var(--Black, #111);
 }
 
+.btn-primary:hover{
+    background-color:rgb(4, 77, 204);
+}
 
 .hide {
     display: none;
@@ -51,7 +54,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding-top: 1.5rem;
-    padding-bottom: 3.8rem;
+
 
 }
 
@@ -165,7 +168,7 @@ nav ul li:nth-child(4) a {
 main {
 
 
-    background-image: linear-gradient(0deg, rgba(254, 163, 1, 0.30) 20%, rgba(255, 255, 255, 0.30) 40%), url(./assets/bg.png);
+    background: linear-gradient(0deg, rgba(254, 163, 1, 0.30) 20%, rgba(255, 255, 255, 0.30) 40%), url(./assets/bg.png), var(--White, #F7F7F7);
 }
 
 /* Standard Curriculum section */
@@ -392,6 +395,34 @@ footer li {
 
 
 
+/* marquee */
+
+
+.scrolling-text {
+    width: 100%;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+    margin: 2.5rem 0;
+    text-align: center;
+    color:#01ACFD;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
 /* Media query for mobile devices */
 
 
@@ -402,8 +433,9 @@ footer li {
 
     /* nav section */
 
+   
 
-    @media screen and (max-width: 768px) {
+
         .nav-options {
             display: none;
             flex-direction: column;
@@ -438,11 +470,17 @@ footer li {
         nav {
             position: relative;
         }
-    }
     
 
 
+
+
     /* banner section */
+
+    .banner-heading {
+
+        font-size: 2.6rem;
+    }
 
     .banner-section {
         flex-direction: column-reverse;
@@ -455,6 +493,10 @@ footer li {
 
     .c-card-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .lr-btn{
+        display: none;
     }
 
 
@@ -504,4 +546,4 @@ footer li {
 
     
 
-}
+    }
